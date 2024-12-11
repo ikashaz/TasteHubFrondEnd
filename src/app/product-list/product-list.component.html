@@ -1,0 +1,28 @@
+<div *ngIf="searchResults && searchResults.length > 0; else allProducts">
+  <div class="product-list">
+    <div class="product" *ngFor="let product of searchResults">
+      <img [src]="product.image_path" alt="{{ product.image_path }}"><br>
+      <h4>{{ product.name }}</h4>
+      <p>Price: RM{{ product.price }}</p>
+      <p>Category: {{ product.category }}</p>
+      <button (click)="addToCart(product)" [routerLink]="['/cart']" [queryParams]="{ id: product.id, name: product.name, price: product.price }">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<ng-template #allProducts>
+  <div class="product-list">
+    <div class="product" *ngFor="let product of products">
+      <img [src]="product.image_path" alt="{{ product.image_path }}"><br>
+      <h4>{{ product.name }}</h4>
+      <p>Price: RM{{ product.price }}</p>
+      <p>Category: {{ product.category }}</p>
+      <button (click)="addToCart(product)" [routerLink]="['/cart']" [queryParams]="{ id: product.id, name: product.name, price: product.price }">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</ng-template>
+

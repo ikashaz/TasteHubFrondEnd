@@ -1,0 +1,11 @@
+<section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-list">
+        <div class="category" *ngFor="let category of categories">
+            <h4>{{ category.name }}</h4>
+            <div class="image-gallery">
+                <img *ngFor="let image of category.images" [src]="image" alt="{{ category.name }}">
+            </div>
+        </div>
+    </div>
+</section>

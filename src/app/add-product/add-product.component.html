@@ -1,0 +1,26 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="productForm">
+    <h2>Add New Product</h2>
+    <div>
+      <label for="image">Upload Image:</label>
+      <input id="image" type="file" (change)="onImageSelected($event)" accept="image/*">
+    </div>
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" required class="input-small">
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description" required></textarea>
+    </div>
+    <div>
+      <label for="price">Price:</label>
+      <input id="price" type="number" formControlName="price" required>
+    </div>
+    <div>
+      <label for="category">Category:</label>
+      <input id="category" formControlName="category" required class="input-small">
+    </div>
+    <button type="submit" [disabled]="!productForm.valid">Add Product</button>
+  </form>
+</div>

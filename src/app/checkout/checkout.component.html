@@ -1,0 +1,53 @@
+<h1>Order Summary</h1>
+
+<form (ngSubmit)="submitOrder()" #checkoutForm="ngForm">
+  <!-- Address Section -->
+  <div>
+    <label for="address">Shipping Address:</label>
+    <textarea
+      id="address"
+      name="address"
+      [(ngModel)]="checkoutData.address"
+      required
+    ></textarea>
+  </div>
+
+  <!-- Payment Method Section -->
+  <div>
+    <label for="paymentMethod">Payment Method:</label>
+    <select
+      id="paymentMethod"
+      name="paymentMethod"
+      [(ngModel)]="checkoutData.paymentMethod"
+      required
+    >
+      <option value="" disabled>Select a payment method</option>
+      <option value="creditCard">Credit Card</option>
+      <option value="paypal">PayPal</option>
+      <option value="online banking">Online Banking</option>
+      <option value="cod">Cash on Delivery</option>
+    </select>
+  </div>
+
+  <!-- Cart Items Section -->
+  <div>
+    <h2>Cart Items</h2>
+    <div *ngIf="cartItems.length > 0; else emptyCart">
+      <ul>
+        <li *ngFor="let item of cartItems">
+          {{ item.name }} - {{ item.quantity }} x RM{{ item.unitPrice}}
+         <p>Total: RM{{ item.totalPrice}}</p> 
+        </li>
+      </ul>
+      <h3>
+          Total: RM{{ calculateTotal()}}
+      </h3>
+    </div>
+    <ng-template #emptyCart>
+      <p>Your cart is empty.</p>
+    </ng-template>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit" [disabled]="!checkoutForm.valid">Place Order</button>
+</form>

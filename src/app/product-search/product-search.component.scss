@@ -1,0 +1,107 @@
+.custom-button {
+    color: rgb(255, 255, 255);
+    background-color:black;
+   /* Set your desired text/icon color */
+    font-weight: bold;
+    text-align: left;
+    /* Add any other styles you want */
+  }
+
+  .mat-icon{
+    color: rgb(255, 255, 255);
+    
+  }
+
+.form-header{
+    padding: 5px;;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 200px;
+    gap: 20px; /* Space between products */
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px; /* Adjust width as needed */
+    text-align: center;
+  }
+  
+  .product img {
+    width: 100%; /* Make image responsive */
+    border-radius: 4px;
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+  }
+  
+  .product h3 {
+    font-size: 18px;
+  }
+  
+  .product p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  .add-to-cart {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Change to your preferred color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: none; /* Remove shadow */
+    border: none; /* Remove any border if needed */
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+//ICON
+.custom-button {
+    color: rgb(255, 255, 255);
+    background-color:black;
+   /* Set your desired text/icon color */
+    font-weight: bold;
+    text-align: left;
+    /* Add any other styles you want */
+  }
+
+  .mat-icon{
+    color: rgb(255, 255, 255);
+    
+  }
+
+.form-header{
+    padding: 5px;
+}
+
+.search-container{
+    margin-right: 50px;
+}
+
+input{
+    padding: 5px;
+    border-radius: 6px;
+    width:300px;
+    margin-left: 10px;
+}
+
+button{
+    background: none;
+    border: none;
+    color: inherit; /* Keep the text color consistent */
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .no-background-btn:hover {
+    text-decoration: underline; /* Optional: Add hover effect */
+}

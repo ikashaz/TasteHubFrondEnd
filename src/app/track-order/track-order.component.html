@@ -1,0 +1,25 @@
+<div class="track-order-container">
+    <div class="track-order-box">
+      <h2>Track Your Order</h2>
+      <input
+        type="text"
+        [(ngModel)]="orderId"
+        placeholder="Enter Order ID"
+        class="order-input"
+      />
+      <button (click)="trackOrder()" class="track-button">Track</button>
+  
+      <div *ngIf="order" class="order-details">
+        <h3>Order Details</h3>
+        <p><strong>Order ID:</strong> {{ order.id }}</p>
+        <p><strong>Status:</strong> {{ order.status }}</p>
+        <p><strong>Product Name:</strong> {{ order.productName }}</p>
+        <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+        <p><strong>Total Price:</strong> RM {{ order.totalPrice }}</p>
+        <p>Customer Id :{{ order.custId }}</p>
+        <p>Username :{{ order.username }}</p>
+        <p><strong>Estimated Delivery:</strong> {{ order.estimatedDeliveryDate }}</p>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,39 @@
+.categories {
+    padding: 10px 100px;
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .category-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .category {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        img {
+            width: 100%; /* Ensures the image fills the width of the category card */
+            height: 150px; /* Set a fixed height */
+            object-fit: contain; /* Ensures the entire image fits within the container */
+            border-radius: 8px 8px 0 0; /* Rounded corners for the image */
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+    }
+}

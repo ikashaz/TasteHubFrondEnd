@@ -1,0 +1,86 @@
+:host {
+   // display: block; /* Ensures the host element takes full space */
+    //background-image: url('../assets/images/wall.jpg'); /* Adjust path */
+   // background-size: cover; /* Adjust as needed */
+   // background-repeat: no-repeat; /* Prevents repeating */
+   // background-position: center; /* Centers the image */
+    //height: 100vh; /* Sets height */
+    background-color: black;
+}
+.navbar{
+    background-color:#333;
+    color: white; 
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.navbar-brand{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 16px;
+}
+
+.spacer{
+    flex:1;
+}
+
+.button{
+    color:white;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.button.active{
+    font-weight: 600;
+}
+
+.custom-toolbar{
+    background-color: black;
+}
+
+.navbar{
+    display:flex;
+    align-items: center;
+    padding: 0 16px;
+    background-color: black;
+    
+}
+
+.navbar-brand{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 16px;
+    color: white;
+}
+
+.spacer{
+    flex: 2;
+}
+
+button{
+    color: white;
+    text-transform: uppercase;
+    margin-left: 8px;
+
+}
+
+button.active {
+    font-weight: 600;
+}
+
+.custom-toolbar{
+    background-color: #ff0000;
+}
+
+footer{
+    padding-top: 10px;
+}
+
+
+
+
+.footertext{
+   
+    color: white;
+}
